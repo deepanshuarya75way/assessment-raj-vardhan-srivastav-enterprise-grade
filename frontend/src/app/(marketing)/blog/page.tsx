@@ -7,7 +7,7 @@ const featured = {
   date: 'March 20, 2026',
   readTime: '6 min read',
   title: 'Introducing Gemini 2.0 Powered Video Intelligence',
-  desc: 'KnowledgeForge now uses Google\'s Gemini 2.0 Flash to understand every frame of your company videos — extracting transcripts, visual descriptions, key topics, and executive summaries in a single multimodal pass.',
+  desc: 'Enterprise Grade AI Copilot now uses Google\'s Gemini 2.0 Flash to understand every frame of your company videos — extracting transcripts, visual descriptions, key topics, and executive summaries in a single multimodal pass.',
   author: { initials: 'SR', name: 'Sofia Reyes', role: 'CTO', gradient: 'from-violet-500 to-purple-600' },
 };
 
@@ -27,7 +27,7 @@ const posts = [
     date: 'March 8, 2026',
     readTime: '5 min read',
     title: 'Multi-Model API Keys: One Key, Every AI Provider',
-    desc: 'Generate a single KnowledgeForge API key that works across Claude, OpenAI, Gemini, Mistral, and Llama — with per-key permissions and rate limits.',
+    desc: 'Generate a single Enterprise Grade AI Copilot API key that works across Claude, OpenAI, Gemini, Mistral, and Llama — with per-key permissions and rate limits.',
     author: { initials: 'JC', name: 'James Chen', role: 'Head of Product', gradient: 'from-pink-500 to-rose-600' },
   },
   {
@@ -44,7 +44,7 @@ const posts = [
     categoryColor: 'bg-green-500/20 text-green-400',
     date: 'February 20, 2026',
     readTime: '7 min read',
-    title: 'How KnowledgeForge Achieves SOC 2 Type II Compliance',
+    title: 'How Enterprise Grade AI Copilot Achieves SOC 2 Type II Compliance',
     desc: 'A transparent look at our security controls, audit process, and the specific technical measures that earned our SOC 2 Type II certification.',
     author: { initials: 'EB', name: 'Emma Brooks', role: 'Head of Design', gradient: 'from-cyan-500 to-blue-600' },
   },
@@ -78,7 +78,7 @@ export default function BlogPage() {
         <div className="text-center mb-16">
           <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4">Blog</h1>
           <p className="text-gray-400 text-xl max-w-2xl mx-auto">
-            Engineering deep dives, product updates, and enterprise AI insights from the KnowledgeForge team.
+            Engineering deep dives, product updates, and enterprise AI insights from the Enterprise Grade AI Copilot team.
           </p>
         </div>
 

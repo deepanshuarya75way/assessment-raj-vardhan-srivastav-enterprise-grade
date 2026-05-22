@@ -29,7 +29,7 @@ async def main():
     async with AsyncSessionLocal() as session:
         # ── Demo user ──────────────────────────────────────────────────────
         result = await session.execute(
-            select(User).where(User.email == "demo@knowledgeforge.ai")
+            select(User).where(User.email == "demo@enterprisegrade.local")
         )
         existing = result.scalar_one_or_none()
         if existing:
@@ -37,17 +37,17 @@ async def main():
         else:
             session.add(User(
                 name="Demo User",
-                email="demo@knowledgeforge.ai",
-                hashed_password=hash_password("demo12345"),
+                email="demo@enterprisegrade.local",
+                hashed_password=hash_password("Demo@123"),
                 role=UserRole.admin,
                 is_active=True,
             ))
             await session.flush()
-            print("✓ Demo user created: demo@knowledgeforge.ai / demo12345")
+            print("✓ Demo user created: demo@enterprisegrade.local / Demo@123")
 
         # ── Admin user ─────────────────────────────────────────────────────
         result2 = await session.execute(
-            select(User).where(User.email == "admin@knowledgeforge.ai")
+            select(User).where(User.email == "admin@enterprisegrade.local")
         )
         existing_admin = result2.scalar_one_or_none()
         if existing_admin:
@@ -55,13 +55,13 @@ async def main():
         else:
             session.add(User(
                 name="Admin",
-                email="admin@knowledgeforge.ai",
-                hashed_password=hash_password("Admin1234!"),
+                email="admin@enterprisegrade.local",
+                hashed_password=hash_password("Admin@123"),
                 role=UserRole.super_admin,
                 is_active=True,
             ))
             await session.flush()
-            print("✓ Admin user created: admin@knowledgeforge.ai / Admin1234!")
+            print("✓ Admin user created: admin@enterprisegrade.local / Admin@123")
 
         await session.commit()
 

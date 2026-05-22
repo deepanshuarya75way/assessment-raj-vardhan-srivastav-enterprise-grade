@@ -1,6 +1,6 @@
-# KnowledgeForge API Backend
+# Enterprise Grade AI Copilot API Backend
 
-FastAPI backend for the KnowledgeForge AI Copilot — an intelligent knowledge management system with RAG-powered chat, document processing, semantic search, and analytics.
+FastAPI backend for the Enterprise Grade AI Copilot — an intelligent knowledge management system with RAG-powered chat, document processing, semantic search, and analytics.
 
 ## Prerequisites
 
@@ -57,7 +57,7 @@ python seed.py
 ```
 
 Demo credentials:
-- **Email:** `demo@knowledgeforge.ai`
+- **Email:** `demo@enterprisegrade.local`
 - **Password:** `Demo1234!`
 
 ### 5. Access the API
@@ -90,7 +90,7 @@ curl -X POST http://localhost:8000/auth/register \
 ```bash
 curl -X POST http://localhost:8000/auth/login \
   -H "Content-Type: application/json" \
-  -d '{"email": "demo@knowledgeforge.ai", "password": "Demo1234!"}'
+  -d '{"email": "demo@enterprisegrade.local", "password": "Demo1234!"}'
 ```
 
 ### Create a conversation and stream a message
@@ -124,7 +124,7 @@ curl -X POST http://localhost:8000/knowledge/documents/upload \
 
 | Variable | Default | Description |
 |----------|---------|-------------|
-| `DATABASE_URL` | `postgresql+asyncpg://postgres:postgres@localhost:5432/knowledgeforge` | PostgreSQL connection URL |
+| `DATABASE_URL` | `postgresql+asyncpg://postgres:postgres@localhost:5432/enterprise_grade` | PostgreSQL connection URL |
 | `REDIS_URL` | `redis://localhost:6379` | Redis connection URL |
 | `SECRET_KEY` | Random | JWT signing key — **change in production!** |
 | `ACCESS_TOKEN_EXPIRE_MINUTES` | `60` | JWT access token lifetime |

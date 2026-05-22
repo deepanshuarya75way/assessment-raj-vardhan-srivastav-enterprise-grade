@@ -16,21 +16,21 @@ const offices = [
   {
     city: 'San Francisco',
     address: '340 Pine Street, Suite 800\nSan Francisco, CA 94104',
-    email: 'hello@knowledgeforge.ai',
+    email: 'hello@enterprisegrade.local',
     phone: '+1 (415) 555-0192',
     flag: '🇺🇸',
   },
   {
     city: 'New York',
     address: '350 Fifth Avenue, 59th Floor\nNew York, NY 10118',
-    email: 'nyc@knowledgeforge.ai',
+    email: 'nyc@enterprisegrade.local',
     phone: '+1 (212) 555-0134',
     flag: '🇺🇸',
   },
   {
     city: 'London',
     address: '30 St Mary Axe\nLondon EC3A 8EP',
-    email: 'london@knowledgeforge.ai',
+    email: 'london@enterprisegrade.local',
     phone: '+44 20 7946 0958',
     flag: '🇬🇧',
   },
@@ -158,7 +158,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     rows={5}
                     required
-                    placeholder="Tell us about your team size, current challenges, and what you're hoping to achieve with KnowledgeForge..."
+                    placeholder="Tell us about your team size, current challenges, and what you're hoping to achieve with Enterprise Grade AI Copilot..."
                     className="w-full bg-gray-800 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-indigo-500 transition-colors resize-none"
                   />
                 </div>
@@ -179,7 +179,7 @@ export default function ContactPage() {
             <div>
               <h2 className="text-2xl font-bold mb-2">Talk to our team</h2>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Whether you're evaluating KnowledgeForge for the first time or ready to roll it
+                Whether you're evaluating Enterprise Grade AI Copilot for the first time or ready to roll it
                 out to your entire organization, we're here to help.
               </p>
             </div>
@@ -192,8 +192,8 @@ export default function ContactPage() {
                 <div>
                   <div className="text-white font-semibold text-sm mb-1">Sales</div>
                   <p className="text-gray-400 text-sm">Get a personalized demo and pricing quote for your team.</p>
-                  <a href="mailto:sales@knowledgeforge.ai" className="text-indigo-400 hover:text-indigo-300 text-sm mt-1 block transition-colors">
-                    sales@knowledgeforge.ai
+                  <a href="mailto:sales@enterprisegrade.local" className="text-indigo-400 hover:text-indigo-300 text-sm mt-1 block transition-colors">
+                    sales@enterprisegrade.local
                   </a>
                 </div>
               </div>
@@ -205,8 +205,8 @@ export default function ContactPage() {
                 <div>
                   <div className="text-white font-semibold text-sm mb-1">Support</div>
                   <p className="text-gray-400 text-sm">Technical help for existing customers. Response within 4 hours.</p>
-                  <a href="mailto:support@knowledgeforge.ai" className="text-indigo-400 hover:text-indigo-300 text-sm mt-1 block transition-colors">
-                    support@knowledgeforge.ai
+                  <a href="mailto:support@enterprisegrade.local" className="text-indigo-400 hover:text-indigo-300 text-sm mt-1 block transition-colors">
+                    support@enterprisegrade.local
                   </a>
                 </div>
               </div>
@@ -218,8 +218,8 @@ export default function ContactPage() {
                 <div>
                   <div className="text-white font-semibold text-sm mb-1">Enterprise</div>
                   <p className="text-gray-400 text-sm">Custom contracts, SSO, compliance, and dedicated support.</p>
-                  <a href="mailto:enterprise@knowledgeforge.ai" className="text-indigo-400 hover:text-indigo-300 text-sm mt-1 block transition-colors">
-                    enterprise@knowledgeforge.ai
+                  <a href="mailto:enterprise@enterprisegrade.local" className="text-indigo-400 hover:text-indigo-300 text-sm mt-1 block transition-colors">
+                    enterprise@enterprisegrade.local
                   </a>
                 </div>
               </div>

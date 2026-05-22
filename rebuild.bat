@@ -1,5 +1,5 @@
 @echo off
-title KnowledgeForge - Rebuild Frontend
+title Enterprise Grade AI Copilot - Rebuild Frontend
 echo.
 echo Rebuilding frontend in production mode...
 echo (Run this after making code changes)
@@ -21,7 +21,7 @@ if %errorlevel% neq 0 (
 
 echo.
 echo Starting frontend...
-start "KnowledgeForge Frontend" cmd /k "npm start -- --port 3001"
+start "Enterprise Grade AI Copilot Frontend" cmd /k "npm start -- --port 3001"
 echo Done! Frontend available at http://localhost:3001
 echo.
 pause

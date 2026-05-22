@@ -162,7 +162,7 @@ const CONNECTOR_CONFIGS: Record<string, ConnectorConfig> = {
       },
       {
         title: 'Create an API Token',
-        description: 'Click "Create API token", give it a name like "KnowledgeForge", and copy the generated token.',
+        description: 'Click "Create API token", give it a name like "Enterprise Grade AI Copilot", and copy the generated token.',
       },
       {
         title: 'Find your Confluence base URL',
@@ -226,7 +226,7 @@ const CONNECTOR_CONFIGS: Record<string, ConnectorConfig> = {
       },
       {
         title: 'Generate a new token',
-        description: 'Click "Generate new token (classic)". Give it a name like "KnowledgeForge" and set an expiration.',
+        description: 'Click "Generate new token (classic)". Give it a name like "Enterprise Grade AI Copilot" and set an expiration.',
       },
       {
         title: 'Select required scopes',
@@ -258,7 +258,7 @@ const CONNECTOR_CONFIGS: Record<string, ConnectorConfig> = {
       },
       {
         title: 'Configure the integration',
-        description: 'Give it a name (e.g. "KnowledgeForge"), associate it with your workspace, and set capabilities to Read content.',
+        description: 'Give it a name (e.g. "Enterprise Grade AI Copilot"), associate it with your workspace, and set capabilities to Read content.',
       },
       {
         title: 'Copy the Integration Token',
@@ -291,7 +291,7 @@ const CONNECTOR_CONFIGS: Record<string, ConnectorConfig> = {
       },
       {
         title: 'Create API Token',
-        description: 'Click "Create API token", label it "KnowledgeForge", and copy the token shown.',
+        description: 'Click "Create API token", label it "Enterprise Grade AI Copilot", and copy the token shown.',
       },
       {
         title: 'Find your Jira URL',
@@ -303,7 +303,7 @@ const CONNECTOR_CONFIGS: Record<string, ConnectorConfig> = {
       },
       {
         title: 'Enter credentials and connect',
-        description: 'Fill in your Jira URL, email, and API token. KnowledgeForge will sync issues, comments, and attachments.',
+        description: 'Fill in your Jira URL, email, and API token. Enterprise Grade AI Copilot will sync issues, comments, and attachments.',
       },
     ],
   },

@@ -26,7 +26,7 @@ export default function AuthLayout({
         </div>
         <div>
           <p className="text-lg font-bold text-surface-900 dark:text-surface-100 leading-tight">
-            KnowledgeForge
+            Enterprise Grade
           </p>
           <p className="text-xs text-surface-500 dark:text-surface-400 leading-tight">
             Enterprise AI Copilot
@@ -41,7 +41,7 @@ export default function AuthLayout({
 
       {/* Footer */}
       <p className="mt-8 text-xs text-surface-400 dark:text-surface-500">
-        &copy; {new Date().getFullYear()} KnowledgeForge. All rights reserved.
+        &copy; {new Date().getFullYear()} Raj Vardhan Srivastav. All rights reserved.
       </p>
     </div>
   );

@@ -33,7 +33,7 @@ export default function RootLoading() {
         </div>
 
         <p className="text-sm text-surface-500 dark:text-surface-400">
-          Loading KnowledgeForge...
+          Loading Enterprise Grade AI Copilot...
         </p>
       </div>
     </div>

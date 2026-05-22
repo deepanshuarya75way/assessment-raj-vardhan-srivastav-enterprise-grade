@@ -5,7 +5,7 @@ const sections = [
   {
     icon: Zap,
     title: 'Getting Started',
-    desc: 'Set up KnowledgeForge in minutes. Install, configure, and make your first AI query.',
+    desc: 'Set up Enterprise Grade AI Copilot in minutes. Install, configure, and make your first AI query.',
     color: 'from-indigo-500 to-violet-500',
     articles: [
       'Quick start guide',
@@ -131,10 +131,10 @@ export default function DocsPage() {
           <span className="text-indigo-300 text-sm font-medium">Documentation</span>
         </div>
         <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4">
-          KnowledgeForge Docs
+          Enterprise Grade AI Copilot Docs
         </h1>
         <p className="text-gray-400 text-xl max-w-2xl mx-auto mb-10">
-          Everything you need to get started, integrate, and get the most out of KnowledgeForge.
+          Everything you need to get started, integrate, and get the most out of Enterprise Grade AI Copilot.
         </p>
 
         {/* Search bar (decorative) */}

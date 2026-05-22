@@ -14,7 +14,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-white text-xl font-bold mb-3">1. Acceptance of Terms</h2>
             <p>
-              By accessing or using the KnowledgeForge platform and services ("Service"), you agree
+              By accessing or using the Enterprise Grade AI Copilot platform and services ("Service"), you agree
               to be bound by these Terms of Service ("Terms"). If you are using the Service on behalf
               of an organization, you represent that you have authority to bind that organization to
               these Terms.
@@ -27,7 +27,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-white text-xl font-bold mb-3">2. Description of Service</h2>
             <p>
-              KnowledgeForge provides an enterprise AI knowledge management platform that enables
+              Enterprise Grade AI Copilot provides an enterprise AI knowledge management platform that enables
               organizations to ingest, index, and query organizational knowledge through AI-powered
               chat, voice, and search interfaces. The Service includes AI Chat, Voice Assistant,
               Meeting Intelligence, Knowledge Base management, AI Agents, Workflow Automation,
@@ -52,7 +52,7 @@ export default function TermsPage() {
             <p>
               Paid subscriptions are billed in advance on a monthly or annual basis. All fees are
               non-refundable except as required by law or as explicitly stated in our refund policy.
-              You authorize KnowledgeForge to charge your payment method for the applicable
+              You authorize Enterprise Grade AI Copilot to charge your payment method for the applicable
               subscription fees.
             </p>
             <p className="mt-3">
@@ -83,7 +83,7 @@ export default function TermsPage() {
             <h2 className="text-white text-xl font-bold mb-3">6. Your Content</h2>
             <p>
               You retain ownership of all content you upload to or create within the Service
-              ("Your Content"). By uploading content, you grant KnowledgeForge a limited,
+              ("Your Content"). By uploading content, you grant Enterprise Grade AI Copilot a limited,
               non-exclusive, worldwide license to process, store, and index Your Content solely
               for the purpose of providing the Service to you.
             </p>
@@ -101,7 +101,7 @@ export default function TermsPage() {
             <h2 className="text-white text-xl font-bold mb-3">7. Intellectual Property</h2>
             <p>
               The Service, including all software, algorithms, designs, trademarks, and content
-              created by KnowledgeForge, is owned by KnowledgeForge, Inc. and protected by
+              created by Enterprise Grade AI Copilot, is owned by Raj Vardhan Srivastav and protected by
               intellectual property laws. Nothing in these Terms grants you any rights in our
               intellectual property except the limited right to use the Service as described herein.
             </p>
@@ -178,9 +178,9 @@ export default function TermsPage() {
           <section>
             <h2 className="text-white text-xl font-bold mb-3">14. Contact</h2>
             <div className="mt-3 p-4 bg-gray-900 border border-white/5 rounded-xl">
-              <p className="font-semibold text-white">KnowledgeForge, Inc. — Legal Team</p>
+              <p className="font-semibold text-white">Raj Vardhan Srivastav — Legal Team</p>
               <p>340 Pine Street, Suite 800, San Francisco, CA 94104</p>
-              <p>Email: <a href="mailto:legal@knowledgeforge.ai" className="text-indigo-400 hover:text-indigo-300 transition-colors">legal@knowledgeforge.ai</a></p>
+              <p>Email: <a href="mailto:legal@enterprisegrade.local" className="text-indigo-400 hover:text-indigo-300 transition-colors">legal@enterprisegrade.local</a></p>
             </div>
           </section>
         </div>

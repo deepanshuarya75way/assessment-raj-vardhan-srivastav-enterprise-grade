@@ -1,4 +1,4 @@
-# KnowledgeForge — Enterprise AI Knowledge Copilot
+# Enterprise Grade AI Copilot
 
 An enterprise-grade AI Knowledge Copilot that serves as a company-wide AI brain. Employees interact with it via **chat**, **voice**, and **video/meetings**. It ingests, indexes, and reasons over organizational knowledge — documents, PDFs, videos, and more — then provides instant, cited, context-aware answers.
 
@@ -378,8 +378,8 @@ The backend auto-seeds two accounts on first startup:
 
 | Role | Email | Password |
 |---|---|---|
-| Demo User | `demo@knowledgeforge.ai` | `demo12345` |
-| Super Admin | `admin@knowledgeforge.ai` | `Admin1234!` |
+| Demo User | `demo@enterprisegrade.local` | `demo12345` |
+| Super Admin | `admin@enterprisegrade.local` | `Admin1234!` |
 
 Quick login buttons for both accounts are available directly on the login page.
 
@@ -421,7 +421,7 @@ Supports file/image/document attachments — drag-and-drop or click to attach PD
 
 ## API Keys
 
-Generate multi-model API keys at `/api-keys` to access KnowledgeForge programmatically:
+Generate multi-model API keys at `/api-keys` to access Enterprise Grade AI Copilot programmatically:
 
 - Select one or more providers: **Claude**, **OpenAI**, **Gemini**, **Mistral**, **Llama**
 - Scope to specific models (e.g. only `claude-sonnet-4-6` and `gpt-4o`)
@@ -430,7 +430,7 @@ Generate multi-model API keys at `/api-keys` to access KnowledgeForge programmat
 - Switch models by changing the `model` field — same key works across all providers
 
 ```bash
-curl -X POST https://api.knowledgeforge.ai/v1/chat \
+curl -X POST https://api.enterprisegrade.local/v1/chat \
   -H "Authorization: Bearer kf_YOUR_API_KEY" \
   -d '{"model": "claude-sonnet-4-6", "messages": [...]}'
 ```
@@ -542,4 +542,4 @@ Interactive docs available at:
 
 ## License
 
-Proprietary — KnowledgeForge. All rights reserved.
+Copyright © 2026 Raj Vardhan Srivastav. All rights reserved.

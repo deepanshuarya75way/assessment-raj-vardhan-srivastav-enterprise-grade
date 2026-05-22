@@ -665,7 +665,7 @@ export default function ApiKeysPage() {
               API Keys
             </h1>
             <p className="text-sm text-surface-500 dark:text-surface-400 mt-0.5">
-              Generate multi-model API keys to access KnowledgeForge programmatically
+              Generate multi-model API keys to access Enterprise Grade AI Copilot programmatically
             </p>
           </div>
           <button
@@ -727,7 +727,7 @@ export default function ApiKeysPage() {
               <Key className="h-8 w-8 text-surface-400" />
             </div>
             <h3 className="text-base font-semibold text-surface-900 dark:text-surface-100 mb-1">No API keys yet</h3>
-            <p className="text-sm text-surface-500 max-w-xs">Generate your first multi-model API key to start building with KnowledgeForge.</p>
+            <p className="text-sm text-surface-500 max-w-xs">Generate your first multi-model API key to start building with Enterprise Grade AI Copilot.</p>
             <button
               onClick={() => setShowCreate(true)}
               className="mt-4 flex items-center gap-2 px-4 py-2 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold transition-colors"
@@ -747,8 +747,8 @@ export default function ApiKeysPage() {
         {/* Docs footer */}
         <div className="mt-8 p-4 rounded-2xl border border-surface-200 dark:border-surface-700 bg-white dark:bg-surface-900">
           <h4 className="text-sm font-semibold text-surface-900 dark:text-surface-100 mb-2">Quick Start</h4>
-          <pre className="text-xs font-mono bg-surface-900 dark:bg-surface-950 text-green-400 p-4 rounded-xl overflow-x-auto">{`# Chat with Claude via KnowledgeForge API
-curl -X POST https://api.knowledgeforge.ai/v1/chat \\
+          <pre className="text-xs font-mono bg-surface-900 dark:bg-surface-950 text-green-400 p-4 rounded-xl overflow-x-auto">{`# Chat with Claude via Enterprise Grade AI Copilot API
+curl -X POST https://api.enterprisegrade.local/v1/chat \\
   -H "Authorization: Bearer kf_YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
   -d '{

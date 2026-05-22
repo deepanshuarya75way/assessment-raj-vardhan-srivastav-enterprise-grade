@@ -65,12 +65,12 @@ const values = [
   {
     icon: Users,
     title: 'Teams, not tools',
-    desc: 'Great software brings people together. KnowledgeForge makes collective intelligence accessible to every person on your team.',
+    desc: 'Great software brings people together. Enterprise Grade AI Copilot makes collective intelligence accessible to every person on your team.',
   },
 ];
 
 const milestones = [
-  { year: '2023', title: 'Founded', desc: 'Alex and Sofia started KnowledgeForge after watching enterprises lose millions to knowledge silos.' },
+  { year: '2023', title: 'Founded', desc: 'Alex and Sofia started Enterprise Grade AI Copilot after watching enterprises lose millions to knowledge silos.' },
   { year: '2023', title: 'Seed Round', desc: 'Raised $4.2M seed from Sequoia and a16z to build the foundational RAG infrastructure.' },
   { year: '2024', title: 'Product Launch', desc: 'Launched publicly with AI Chat and Knowledge Base. 500 teams signed up in the first week.' },
   { year: '2024', title: 'Series A', desc: 'Raised $22M Series A. Added Voice Assistant, Meeting Intelligence, and 20+ integrations.' },
@@ -93,7 +93,7 @@ export default function AboutPage() {
           </span>
         </h1>
         <p className="text-gray-400 text-xl max-w-3xl mx-auto leading-relaxed mb-10">
-          KnowledgeForge was founded by engineers who were tired of watching brilliant teams
+          Enterprise Grade AI Copilot was founded by engineers who were tired of watching brilliant teams
           waste hours searching for information that already existed somewhere inside their
           organization. We built the AI copilot we always wished existed.
         </p>

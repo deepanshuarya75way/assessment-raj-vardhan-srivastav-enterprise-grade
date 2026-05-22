@@ -1,9 +1,9 @@
 @echo off
 setlocal EnableDelayedExpansion
-title KnowledgeForge Launcher
+title Enterprise Grade AI Copilot Launcher
 
 echo ============================================================
-echo   KnowledgeForge AI Copilot - Smart Start
+echo   Enterprise Grade AI Copilot Copilot - Smart Start
 echo   DB : Supabase cloud  (no local DB container!)
 echo   API: Native Python   (no Docker for API!)
 echo   Cache: Redis via Docker
@@ -55,7 +55,7 @@ if %errorlevel% equ 0 (
     echo   API already running on port 8010. [SKIP]
 ) else (
     cd /d "%~dp0backend"
-    start "KnowledgeForge API" cmd /k "python -m uvicorn app.main:app --host 0.0.0.0 --port 8010"
+    start "Enterprise Grade AI Copilot API" cmd /k "python -m uvicorn app.main:app --host 0.0.0.0 --port 8010"
     echo   Waiting for API to be ready...
     :waitapi
     curl -s http://localhost:8010/health >nul 2>&1
@@ -96,7 +96,7 @@ netstat -an | findstr ":3001 " | findstr "LISTENING" >nul 2>&1
 if %errorlevel% equ 0 (
     echo   Frontend already running on port 3001. [SKIP]
 ) else (
-    start "KnowledgeForge Frontend" cmd /k "npm start -- --port 3001"
+    start "Enterprise Grade AI Copilot Frontend" cmd /k "npm start -- --port 3001"
     echo   Frontend starting...
     :waitfrontend
     curl -s http://localhost:3001 >nul 2>&1
@@ -117,7 +117,7 @@ echo   Backend   : http://localhost:8010
 echo   API Docs  : http://localhost:8010/docs
 echo   Database  : Supabase cloud (always on, zero RAM)
 echo.
-echo   Login     : demo@knowledgeforge.ai / demo12345
+echo   Login     : demo@enterprisegrade.local / Demo@123
 echo.
 echo   NOTE: After code changes, run rebuild.bat to update build.
 echo   To STOP   : run stop.bat

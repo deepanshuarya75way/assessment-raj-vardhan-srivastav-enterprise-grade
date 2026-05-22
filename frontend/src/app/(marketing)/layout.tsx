@@ -35,7 +35,7 @@ function MarketingNav() {
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center">
               <Zap className="w-4 h-4 text-white" />
             </div>
-            <span className="text-white font-bold text-lg tracking-tight">KnowledgeForge</span>
+            <span className="text-white font-bold text-lg tracking-tight">Enterprise Grade AI Copilot</span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
@@ -167,7 +167,7 @@ function MarketingFooter() {
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center">
                 <Zap className="w-4 h-4 text-white" />
               </div>
-              <span className="text-white font-bold text-lg">KnowledgeForge</span>
+              <span className="text-white font-bold text-lg">Enterprise Grade AI Copilot</span>
             </Link>
             <p className="text-gray-500 text-sm leading-relaxed">
               The enterprise AI copilot that transforms how teams access and leverage
@@ -198,7 +198,7 @@ function MarketingFooter() {
 
         <div className="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-gray-600 text-sm">
-            © {new Date().getFullYear()} KnowledgeForge, Inc. All rights reserved.
+            © {new Date().getFullYear()} Raj Vardhan Srivastav All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             {socials.map((s) => (

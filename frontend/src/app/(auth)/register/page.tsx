@@ -128,7 +128,7 @@ function RegisterForm() {
         return;
       }
 
-      toast.success('Account created! Welcome to KnowledgeForge.');
+      toast.success('Account created! Welcome to Enterprise Grade AI Copilot.');
       router.push('/home');
       router.refresh();
     } catch (err: any) {
@@ -146,7 +146,7 @@ function RegisterForm() {
         <p className="text-sm text-surface-500 dark:text-surface-400">
           {plan === 'professional'
             ? 'Start your Professional trial — no credit card required'
-            : 'Get started with KnowledgeForge for free'}
+            : 'Get started with Enterprise Grade AI Copilot for free'}
         </p>
         {plan === 'professional' && (
           <span className="inline-flex items-center gap-1.5 mt-1 px-2.5 py-1 text-xs font-medium rounded-full bg-brand-50 dark:bg-brand-950/50 text-brand-700 dark:text-brand-400 border border-brand-200 dark:border-brand-800">

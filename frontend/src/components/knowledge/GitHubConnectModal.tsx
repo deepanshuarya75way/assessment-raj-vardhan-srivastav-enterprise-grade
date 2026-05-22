@@ -84,7 +84,7 @@ export function GitHubConnectModal({ onClose }: GitHubConnectModalProps) {
               <li>Copy the token and paste it below</li>
             </ol>
             <a
-              href="https://github.com/settings/tokens/new?scopes=repo&description=KnowledgeForge"
+              href="https://github.com/settings/tokens/new?scopes=repo&description=Enterprise Grade AI Copilot"
               target="_blank"
               rel="noreferrer"
               className="mt-2 inline-flex items-center gap-1 text-xs font-medium underline"

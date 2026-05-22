@@ -81,7 +81,7 @@ function ChatDemo() {
   const [typed, setTyped] = useState('');
   const messages = [
     { role: 'user', text: "What's our Q4 revenue target and which products are driving growth?" },
-    { role: 'ai', text: "Based on the **Q4 Financial Plan** and **Product Roadmap v3**, your Q4 revenue target is **$4.2M** — a 34% increase over Q3.\n\n**Top growth drivers:**\n• Enterprise tier upsells (+$1.1M projected)\n• KnowledgeForge Pro seats (+$890K)\n• API usage revenue (+$340K)\n\nThe Sales team deck notes that **APAC expansion** is the single largest upside opportunity this quarter.", citations: ['Q4 Financial Plan.pdf', 'Product Roadmap v3.docx', 'Sales Team Q4 Deck.pptx'] },
+    { role: 'ai', text: "Based on the **Q4 Financial Plan** and **Product Roadmap v3**, your Q4 revenue target is **$4.2M** — a 34% increase over Q3.\n\n**Top growth drivers:**\n• Enterprise tier upsells (+$1.1M projected)\n• Enterprise Grade AI Copilot Pro seats (+$890K)\n• API usage revenue (+$340K)\n\nThe Sales team deck notes that **APAC expansion** is the single largest upside opportunity this quarter.", citations: ['Q4 Financial Plan.pdf', 'Product Roadmap v3.docx', 'Sales Team Q4 Deck.pptx'] },
   ];
 
   useEffect(() => {
@@ -189,7 +189,7 @@ function SearchDemo() {
   const results = [
     { title: 'SOC 2 Type II Compliance Report', source: 'Confluence', snippet: '...our infrastructure meets all SOC 2 Type II requirements. Last audit completed March 2025 with zero critical findings...', score: 97 },
     { title: 'Security Architecture Overview', source: 'Google Drive', snippet: '...AES-256 encryption at rest, TLS 1.3 in transit. All data isolated per tenant with separate encryption keys...', score: 94 },
-    { title: 'Enterprise Onboarding Checklist', source: 'Notion', snippet: '...security review required before provisioning enterprise accounts. Contact security@knowledgeforge.ai for compliance docs...', score: 88 },
+    { title: 'Enterprise Onboarding Checklist', source: 'Notion', snippet: '...security review required before provisioning enterprise accounts. Contact security@enterprisegrade.local for compliance docs...', score: 88 },
   ];
   const [show, setShow] = useState(false);
   useEffect(() => {
@@ -282,7 +282,7 @@ function AgentsDemo() {
   const report = `# Competitive Analysis: AI Knowledge Tools
 
 ## Executive Summary
-KnowledgeForge leads on **RAG accuracy** and **multi-modal ingestion** vs. Notion AI, Guru, and Confluence.
+Enterprise Grade AI Copilot leads on **RAG accuracy** and **multi-modal ingestion** vs. Notion AI, Guru, and Confluence.
 
 ## Key Differentiators
 - **Citation accuracy**: 94% vs industry avg 71%
@@ -478,7 +478,7 @@ function Navbar() {
               <Zap className="w-4 h-4 text-white" />
             </div>
             <span className="text-white font-bold text-lg tracking-tight">
-              KnowledgeForge
+              Enterprise Grade AI Copilot
             </span>
           </div>
 
@@ -602,7 +602,7 @@ function Hero() {
 
         {/* Subheadline */}
         <p className="text-xl sm:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed mb-10">
-          Eliminate knowledge silos. KnowledgeForge ingests every document, Slack thread,
+          Eliminate knowledge silos. Enterprise Grade AI Copilot ingests every document, Slack thread,
           meeting, and codebase — then delivers instant, cited answers through chat, voice,
           and video.
         </p>
@@ -635,7 +635,7 @@ function Hero() {
               <div className="w-3 h-3 rounded-full bg-yellow-500/70" />
               <div className="w-3 h-3 rounded-full bg-green-500/70" />
               <div className="flex-1 text-center text-gray-500 text-xs">
-                KnowledgeForge — AI Copilot
+                Enterprise Grade AI Copilot — AI Copilot
               </div>
             </div>
 
@@ -832,7 +832,7 @@ function HowItWorks() {
     {
       num: '01',
       title: 'Connect your knowledge sources',
-      desc: 'Link your Google Drive, Slack, Notion, GitHub, Confluence, and 15+ other sources in minutes. KnowledgeForge continuously syncs and indexes all your content.',
+      desc: 'Link your Google Drive, Slack, Notion, GitHub, Confluence, and 15+ other sources in minutes. Enterprise Grade AI Copilot continuously syncs and indexes all your content.',
       icon: Database,
     },
     {
@@ -949,7 +949,7 @@ function Testimonials() {
       role: 'VP of Engineering',
       company: 'Meridian Labs',
       quote:
-        "KnowledgeForge cut our onboarding time by 60%. New engineers can now find answers to complex architecture questions in seconds instead of pinging senior devs all day.",
+        "Enterprise Grade AI Copilot cut our onboarding time by 60%. New engineers can now find answers to complex architecture questions in seconds instead of pinging senior devs all day.",
       color: 'from-indigo-500 to-violet-600',
     },
     {
@@ -958,7 +958,7 @@ function Testimonials() {
       role: 'Chief of Staff',
       company: 'Apex Consulting',
       quote:
-        "We have 10 years of meeting recordings, Confluence pages, and email threads. KnowledgeForge surfaces exactly the right information every time. It's like having a perfect institutional memory.",
+        "We have 10 years of meeting recordings, Confluence pages, and email threads. Enterprise Grade AI Copilot surfaces exactly the right information every time. It's like having a perfect institutional memory.",
       color: 'from-violet-500 to-purple-600',
     },
     {
@@ -967,7 +967,7 @@ function Testimonials() {
       role: 'Head of Customer Success',
       company: 'CloudPilot',
       quote:
-        "Our support team uses KnowledgeForge to answer customer questions 3x faster. The citations give customers confidence, and the AI never makes up answers — it always cites sources.",
+        "Our support team uses Enterprise Grade AI Copilot to answer customer questions 3x faster. The citations give customers confidence, and the AI never makes up answers — it always cites sources.",
       color: 'from-pink-500 to-rose-600',
     },
   ];
@@ -1177,7 +1177,7 @@ function CTABanner() {
               collective intelligence?
             </h2>
             <p className="text-indigo-200 text-lg mb-8 max-w-xl mx-auto">
-              Join 500+ enterprises already using KnowledgeForge to eliminate silos and
+              Join 500+ enterprises already using Enterprise Grade AI Copilot to eliminate silos and
               move at the speed of knowledge.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -1266,7 +1266,7 @@ function Footer() {
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center">
                 <Zap className="w-4 h-4 text-white" />
               </div>
-              <span className="text-white font-bold text-lg">KnowledgeForge</span>
+              <span className="text-white font-bold text-lg">Enterprise Grade AI Copilot</span>
             </div>
             <p className="text-gray-500 text-sm leading-relaxed">
               The enterprise AI copilot that transforms how teams access and leverage
@@ -1299,7 +1299,7 @@ function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-gray-600 text-sm">
-            © {new Date().getFullYear()} KnowledgeForge, Inc. All rights reserved.
+            © {new Date().getFullYear()} Raj Vardhan Srivastav All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             {socials.map((s) => (

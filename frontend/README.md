@@ -1,7 +1,7 @@
-# KnowledgeForge AI Copilot — Frontend
+# Enterprise Grade AI Copilot — Frontend
 
 ## Overview
-This is the frontend for KnowledgeForge AI Copilot, built with Next.js 14+, TypeScript, Tailwind CSS, Zustand, and NextAuth.js. It provides the user interface for chat, voice, meetings, knowledge base, analytics, and admin features.
+This is the frontend for Enterprise Grade AI Copilot, built with Next.js 14+, TypeScript, Tailwind CSS, Zustand, and NextAuth.js. It provides the user interface for chat, voice, meetings, knowledge base, analytics, and admin features.
 
 ---
 
@@ -52,8 +52,8 @@ npm run start
 
 ### Docker
 ```bash
-docker build -t knowledgeforge-frontend .
-docker run -p 3000:3000 knowledgeforge-frontend
+docker build -t enterprise-grade-ai-copilot-frontend .
+docker run -p 3000:3000 enterprise-grade-ai-copilot-frontend
 ```
 
 ---
@@ -115,4 +115,4 @@ Pull requests welcome! Please lint, typecheck, and test before submitting.
 ---
 
 ## License
-© 2026 KnowledgeForge. All rights reserved.
+© 2026 Enterprise Grade AI Copilot. All rights reserved.

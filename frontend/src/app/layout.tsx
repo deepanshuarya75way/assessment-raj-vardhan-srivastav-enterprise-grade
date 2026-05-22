@@ -11,8 +11,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'KnowledgeForge — Enterprise AI Knowledge Copilot',
-    template: '%s | KnowledgeForge',
+    default: 'Enterprise Grade AI Copilot',
+    template: '%s | Enterprise Grade AI Copilot',
   },
   description:
     'The enterprise-grade AI Knowledge Copilot. Eliminate information silos and access your organization\'s collective intelligence instantly.',
@@ -23,22 +23,22 @@ export const metadata: Metadata = {
     'RAG',
     'document AI',
   ],
-  authors: [{ name: 'KnowledgeForge' }],
-  creator: 'KnowledgeForge',
+  authors: [{ name: 'Raj Vardhan Srivastav' }],
+  creator: 'Raj Vardhan Srivastav',
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3001'
   ),
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    title: 'KnowledgeForge — Enterprise AI Knowledge Copilot',
+    title: 'Enterprise Grade AI Copilot',
     description:
       'Access your organization\'s collective intelligence. Instantly.',
-    siteName: 'KnowledgeForge',
+    siteName: 'Enterprise Grade AI Copilot',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'KnowledgeForge',
+    title: 'Enterprise Grade AI Copilot',
     description: 'Enterprise AI Knowledge Copilot',
   },
   robots: {

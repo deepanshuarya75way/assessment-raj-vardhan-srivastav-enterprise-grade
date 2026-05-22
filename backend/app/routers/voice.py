@@ -169,7 +169,7 @@ async def voice_ask(
     doc_inventory = await _list_user_documents(current_user.id, db)
 
     system_prompt = (
-        "You are KnowledgeForge Voice Assistant. Answer the user's question clearly "
+        "You are Enterprise Grade AI Copilot Voice Assistant. Answer the user's question clearly "
         "using the provided knowledge base context. "
         "Your response will be read aloud by text-to-speech, so avoid markdown, "
         "bullet points, asterisks, or special symbols. "
@@ -252,7 +252,7 @@ async def voice_ask(
             )
         else:
             answer = (
-                "I'm KnowledgeForge Voice Assistant. You have no documents uploaded yet. "
+                "I'm Enterprise Grade AI Copilot Voice Assistant. You have no documents uploaded yet. "
                 "Upload files in the Knowledge Base section and I can answer questions about them."
             )
 

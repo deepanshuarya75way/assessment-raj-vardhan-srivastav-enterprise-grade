@@ -77,7 +77,7 @@ export default function RoadmapPage() {
         </p>
         <p className="text-gray-500 text-sm">
           Last updated: March 26, 2026 · Have a feature request?{' '}
-          <a href="mailto:feedback@knowledgeforge.ai" className="text-indigo-400 hover:text-indigo-300 transition-colors">
+          <a href="mailto:feedback@enterprisegrade.local" className="text-indigo-400 hover:text-indigo-300 transition-colors">
             Let us know →
           </a>
         </p>
@@ -141,10 +141,10 @@ export default function RoadmapPage() {
           <h2 className="text-3xl font-extrabold mb-4">Missing something?</h2>
           <p className="text-gray-400 mb-6">
             Feature requests from customers directly shape our roadmap. Tell us what would make
-            KnowledgeForge a must-have for your team.
+            Enterprise Grade AI Copilot a must-have for your team.
           </p>
           <a
-            href="mailto:feedback@knowledgeforge.ai"
+            href="mailto:feedback@enterprisegrade.local"
             className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-8 py-4 rounded-xl transition-all"
           >
             Submit a feature request →

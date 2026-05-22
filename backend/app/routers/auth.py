@@ -244,7 +244,7 @@ async def mfa_setup(
     import secrets as _sec
     secret = pyotp.random_base32()
     totp = pyotp.TOTP(secret)
-    uri = totp.provisioning_uri(name=current_user.email, issuer_name="KnowledgeForge")
+    uri = totp.provisioning_uri(name=current_user.email, issuer_name="Enterprise Grade AI Copilot")
     backup_codes = [_sec.token_hex(4).upper() for _ in range(8)]
     current_user.mfa_secret = secret
     current_user.mfa_backup_codes = backup_codes

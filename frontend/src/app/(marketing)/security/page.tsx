@@ -100,7 +100,7 @@ export default function SecurityPage() {
           </span>
         </h1>
         <p className="text-gray-400 text-xl max-w-3xl mx-auto leading-relaxed">
-          KnowledgeForge is built from the ground up for enterprise-grade security, compliance,
+          Enterprise Grade AI Copilot is built from the ground up for enterprise-grade security, compliance,
           and data governance. We protect your most sensitive organizational knowledge.
         </p>
       </section>
@@ -172,13 +172,13 @@ export default function SecurityPage() {
             and keeping you informed of our progress.
           </p>
           <a
-            href="mailto:security@knowledgeforge.ai"
+            href="mailto:security@enterprisegrade.local"
             className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-8 py-4 rounded-xl transition-all"
           >
             <Shield className="w-5 h-5" />
             Report a Vulnerability
           </a>
-          <p className="text-gray-500 text-sm mt-4">security@knowledgeforge.ai</p>
+          <p className="text-gray-500 text-sm mt-4">security@enterprisegrade.local</p>
         </div>
       </section>
 

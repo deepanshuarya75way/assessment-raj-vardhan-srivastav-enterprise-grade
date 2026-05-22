@@ -16,7 +16,7 @@ class Settings(BaseSettings):
     )
 
     # Database
-    DATABASE_URL: str = "postgresql+asyncpg://postgres:postgres@localhost:5432/knowledgeforge"
+    DATABASE_URL: str = "postgresql+asyncpg://postgres:postgres@localhost:5432/enterprise_grade"
     DATABASE_SSL: bool = False
 
     # Redis
@@ -58,8 +58,9 @@ class Settings(BaseSettings):
 
     # App
     APP_VERSION: str = "1.0.0"
-    APP_NAME: str = "KnowledgeForge API"
+    APP_NAME: str = "Enterprise Grade AI Copilot API"
     DEBUG: bool = False
+    SEED_DEMO_USERS: bool = False
 
     @field_validator("SECRET_KEY", mode="before")
     @classmethod

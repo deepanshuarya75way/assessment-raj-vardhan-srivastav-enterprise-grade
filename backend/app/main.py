@@ -22,66 +22,53 @@ logger = logging.getLogger(__name__)
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Startup and shutdown events."""
-    logger.info("Starting KnowledgeForge API...")
+    logger.info(f"Starting {settings.APP_NAME}...")
     await init_db()
 
-    # ── Auto-seed demo + admin users (idempotent) ──────────────────────────
-    try:
-        from sqlalchemy import text
-        from app.database import AsyncSessionLocal
-        from app.core.security import hash_password
+    if settings.SEED_DEMO_USERS:
+        try:
+            from sqlalchemy import text
+            from app.database import AsyncSessionLocal
+            from app.core.security import hash_password
 
-        async with AsyncSessionLocal() as session:
-            r = await session.execute(
-                text("SELECT id FROM users WHERE email='demo@knowledgeforge.ai'")
-            )
-            if r.scalar_one_or_none() is None:
-                await session.execute(text(
-                    "INSERT INTO users (id, email, name, hashed_password, role, is_active, created_at, updated_at) "
-                    "VALUES (gen_random_uuid(), 'demo@knowledgeforge.ai', 'Demo User', :pw, 'admin', true, now(), now())"
-                ), {"pw": hash_password("Demo@123")})
-                logger.info("Seed: demo user created.")
-            else:
-                await session.execute(text(
-                    "UPDATE users SET hashed_password=:pw, role='admin' "
-                    "WHERE email='demo@knowledgeforge.ai'"
-                ), {"pw": hash_password("Demo@123")})
-                logger.info("Seed: demo user password/role verified.")
+            async with AsyncSessionLocal() as session:
+                r = await session.execute(
+                    text("SELECT id FROM users WHERE email='demo@enterprisegrade.local'")
+                )
+                if r.scalar_one_or_none() is None:
+                    await session.execute(text(
+                        "INSERT INTO users (id, email, name, hashed_password, role, is_active, created_at, updated_at) "
+                        "VALUES (gen_random_uuid(), 'demo@enterprisegrade.local', 'Demo User', :pw, 'admin', true, now(), now())"
+                    ), {"pw": hash_password("Demo@123")})
+                    logger.info("Seed: demo user created.")
 
-            r2 = await session.execute(
-                text("SELECT id FROM users WHERE email='admin@knowledgeforge.ai'")
-            )
-            if r2.scalar_one_or_none() is None:
-                await session.execute(text(
-                    "INSERT INTO users (id, email, name, hashed_password, role, is_active, created_at, updated_at) "
-                    "VALUES (gen_random_uuid(), 'admin@knowledgeforge.ai', 'Admin', :pw, 'super_admin', true, now(), now())"
-                ), {"pw": hash_password("Admin@123")})
-                logger.info("Seed: admin user created.")
-            else:
-                await session.execute(text(
-                    "UPDATE users SET hashed_password=:pw, role='super_admin' "
-                    "WHERE email='admin@knowledgeforge.ai'"
-                ), {"pw": hash_password("Admin@123")})
-                logger.info("Seed: admin user password/role verified.")
+                r2 = await session.execute(
+                    text("SELECT id FROM users WHERE email='admin@enterprisegrade.local'")
+                )
+                if r2.scalar_one_or_none() is None:
+                    await session.execute(text(
+                        "INSERT INTO users (id, email, name, hashed_password, role, is_active, created_at, updated_at) "
+                        "VALUES (gen_random_uuid(), 'admin@enterprisegrade.local', 'Admin', :pw, 'super_admin', true, now(), now())"
+                    ), {"pw": hash_password("Admin@123")})
+                    logger.info("Seed: admin user created.")
 
-            await session.commit()
-    except Exception as exc:
-        logger.warning(f"Seed step skipped or failed (non-fatal): {exc}")
-    # ── end seed ────────────────────────────────────────────────────────────
+                await session.commit()
+        except Exception as exc:
+            logger.warning(f"Seed step skipped or failed (non-fatal): {exc}")
 
-    logger.info(f"KnowledgeForge API v{settings.APP_VERSION} ready.")
+    logger.info(f"{settings.APP_NAME} v{settings.APP_VERSION} ready.")
     logger.info(
         f"AI mode: {'Claude (Anthropic)' if settings.has_anthropic_key else 'OpenAI' if (settings.OPENAI_API_KEY and settings.OPENAI_API_KEY.strip()) else 'Mock (no API key)'}"
     )
     yield
-    logger.info("Shutting down KnowledgeForge API...")
+    logger.info(f"Shutting down {settings.APP_NAME}...")
 
 
 app = FastAPI(
-    title="KnowledgeForge API",
+    title=settings.APP_NAME,
     version=settings.APP_VERSION,
     description=(
-        "KnowledgeForge AI Copilot Backend — intelligent knowledge management with RAG-powered chat, "
+        "Enterprise Grade AI Copilot Backend — intelligent knowledge management with RAG-powered chat, "
         "document processing, semantic search, and analytics."
     ),
     docs_url="/docs",
@@ -133,7 +120,7 @@ async def health():
 @app.get("/", tags=["Health"])
 async def root():
     return {
-        "name": "KnowledgeForge API",
+        "name": settings.APP_NAME,
         "version": settings.APP_VERSION,
         "docs": "/docs",
         "health": "/health",

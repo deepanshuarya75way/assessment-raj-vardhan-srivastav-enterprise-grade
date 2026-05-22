@@ -532,7 +532,7 @@ export default function AdminPage() {
             </div>
             <div>
               <h1 className="text-xl font-semibold text-surface-900 dark:text-surface-100">Admin Console</h1>
-              <p className="text-xs text-surface-500">KnowledgeForge · Admin access</p>
+              <p className="text-xs text-surface-500">Enterprise Grade AI Copilot · Admin access</p>
             </div>
           </div>
           <Badge variant="danger" size="sm">

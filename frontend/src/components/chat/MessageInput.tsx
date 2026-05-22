@@ -387,7 +387,7 @@ export function MessageInput({ onSend, disabled, placeholder, onAbort }: Message
       </div>
 
       <p className="mt-2 text-center text-[10px] text-surface-300 dark:text-surface-600">
-        KnowledgeForge AI may make mistakes. Check important info.
+        Enterprise Grade AI Copilot may make mistakes. Check important info.
       </p>
     </div>
   );

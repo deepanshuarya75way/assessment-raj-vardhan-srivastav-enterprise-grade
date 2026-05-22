@@ -14,7 +14,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-white text-xl font-bold mb-3">1. Introduction</h2>
             <p>
-              KnowledgeForge, Inc. ("KnowledgeForge", "we", "us", or "our") is committed to
+              Raj Vardhan Srivastav ("Enterprise Grade AI Copilot", "we", "us", or "our") is committed to
               protecting your privacy. This Privacy Policy explains how we collect, use, disclose,
               and safeguard your information when you use our platform and services (the "Service").
             </p>
@@ -92,7 +92,7 @@ export default function PrivacyPage() {
             <p className="mt-3">
               Despite these measures, no transmission over the internet is 100% secure.
               If you believe your account has been compromised, contact us immediately at
-              {' '}<a href="mailto:security@knowledgeforge.ai" className="text-indigo-400 hover:text-indigo-300 transition-colors">security@knowledgeforge.ai</a>.
+              {' '}<a href="mailto:security@enterprisegrade.local" className="text-indigo-400 hover:text-indigo-300 transition-colors">security@enterprisegrade.local</a>.
             </p>
           </section>
 
@@ -142,7 +142,7 @@ export default function PrivacyPage() {
               Our legal basis for processing is: performance of a contract (providing the Service),
               legitimate interests (security, fraud prevention, analytics), and consent (where
               applicable). To exercise your rights, contact{' '}
-              <a href="mailto:privacy@knowledgeforge.ai" className="text-indigo-400 hover:text-indigo-300 transition-colors">privacy@knowledgeforge.ai</a>.
+              <a href="mailto:privacy@enterprisegrade.local" className="text-indigo-400 hover:text-indigo-300 transition-colors">privacy@enterprisegrade.local</a>.
             </p>
           </section>
 
@@ -170,9 +170,9 @@ export default function PrivacyPage() {
               If you have questions, concerns, or requests regarding this Privacy Policy, please contact:
             </p>
             <div className="mt-3 p-4 bg-gray-900 border border-white/5 rounded-xl">
-              <p className="font-semibold text-white">KnowledgeForge, Inc. — Privacy Team</p>
+              <p className="font-semibold text-white">Raj Vardhan Srivastav — Privacy Team</p>
               <p>340 Pine Street, Suite 800, San Francisco, CA 94104</p>
-              <p>Email: <a href="mailto:privacy@knowledgeforge.ai" className="text-indigo-400 hover:text-indigo-300 transition-colors">privacy@knowledgeforge.ai</a></p>
+              <p>Email: <a href="mailto:privacy@enterprisegrade.local" className="text-indigo-400 hover:text-indigo-300 transition-colors">privacy@enterprisegrade.local</a></p>
             </div>
           </section>
         </div>

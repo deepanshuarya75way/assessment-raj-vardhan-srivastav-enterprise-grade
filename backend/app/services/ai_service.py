@@ -21,7 +21,7 @@ logger = logging.getLogger(__name__)
 # Mock responses keyed by topic detection
 MOCK_RESPONSES = {
     "default": (
-        "I'm KnowledgeForge AI, your intelligent knowledge assistant. "
+        "I'm Enterprise Grade AI Copilot, your intelligent knowledge assistant. "
         "I can help you search through your documents, answer questions based on your knowledge base, "
         "and provide insights from your uploaded content. "
         "Since no Anthropic API key is configured, I'm running in demo mode. "
@@ -29,7 +29,7 @@ MOCK_RESPONSES = {
         "What would you like to explore in your knowledge base today?"
     ),
     "hello": (
-        "Hello! I'm KnowledgeForge AI, your intelligent knowledge copilot. "
+        "Hello! I'm Enterprise Grade AI Copilot, your intelligent knowledge copilot. "
         "I'm here to help you navigate and extract insights from your document library. "
         "I can answer questions, summarize documents, find relevant information, "
         "and help you discover connections across your knowledge base. "
@@ -53,7 +53,7 @@ MOCK_RESPONSES = {
         "Would you like to upload a document now, or do you have a specific question about your existing content?"
     ),
     "search": (
-        "Great question about search! KnowledgeForge uses semantic search to find the most relevant content in your knowledge base.\n\n"
+        "Great question about search! Enterprise Grade AI Copilot uses semantic search to find the most relevant content in your knowledge base.\n\n"
         "Unlike keyword search, semantic search understands the **meaning** behind your query. "
         "For example, searching for 'revenue growth' will also find documents about 'sales increase' or 'financial performance improvement'.\n\n"
         "You can also:\n"
@@ -433,7 +433,7 @@ async def stream_chat_response(
 
     # Build system prompt with RAG context from both KB and web sources
     effective_system = system_prompt or (
-        "You are KnowledgeForge AI, an intelligent knowledge management assistant. "
+        "You are Enterprise Grade AI Copilot, an intelligent knowledge management assistant. "
         "You help users search, analyze, and extract insights from their document library. "
         "Be concise, accurate, and professional. "
         "Do not use emojis in your responses. "

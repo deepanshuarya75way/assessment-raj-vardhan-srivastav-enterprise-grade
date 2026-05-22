@@ -424,7 +424,7 @@ export default function ChatPage() {
               Ask your knowledge base anything
             </h2>
             <p className="mb-8 text-center text-sm text-surface-500 dark:text-surface-400 max-w-md">
-              KnowledgeForge searches across all your documents, meetings, Slack
+              Enterprise Grade AI Copilot searches across all your documents, meetings, Slack
               threads, and connected sources to give you instant, cited answers.
             </p>
 
@@ -553,7 +553,7 @@ export default function ChatPage() {
           </form>
 
           <p className="mt-2 text-center text-[11px] text-surface-400 dark:text-surface-500">
-            KnowledgeForge can make mistakes. Always verify important information from sources.
+            Enterprise Grade AI Copilot can make mistakes. Always verify important information from sources.
             Press <kbd className="rounded border border-surface-200 dark:border-surface-700 px-1 py-0.5 font-mono text-[10px]">Enter</kbd> to send,{' '}
             <kbd className="rounded border border-surface-200 dark:border-surface-700 px-1 py-0.5 font-mono text-[10px]">Shift+Enter</kbd> for new line.
           </p>

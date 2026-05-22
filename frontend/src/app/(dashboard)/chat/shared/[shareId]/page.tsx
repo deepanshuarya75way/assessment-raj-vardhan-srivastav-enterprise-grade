@@ -31,7 +31,7 @@ export default function SharedChatPage() {
             </div>
             <div>
               <div className="text-white font-semibold text-sm">Shared Conversation</div>
-              <div className="text-gray-500 text-xs flex items-center gap-1"><Lock className="w-3 h-3" /> Read-only · KnowledgeForge</div>
+              <div className="text-gray-500 text-xs flex items-center gap-1"><Lock className="w-3 h-3" /> Read-only · Enterprise Grade AI Copilot</div>
             </div>
           </div>
           <div className="flex items-center gap-2">

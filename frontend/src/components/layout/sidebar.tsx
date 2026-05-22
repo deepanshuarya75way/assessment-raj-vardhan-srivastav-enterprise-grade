@@ -180,7 +180,7 @@ export function Sidebar() {
           {!collapsed && (
             <div className="min-w-0">
               <p className="truncate text-sm font-semibold text-surface-900 dark:text-surface-100">
-                KnowledgeForge
+                Enterprise Grade
               </p>
               <p className="truncate text-[10px] text-surface-400 dark:text-surface-500">
                 AI Copilot
@@ -240,4 +240,3 @@ export function Sidebar() {
     </aside>
   );
 }
-

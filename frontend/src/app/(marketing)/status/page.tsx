@@ -73,7 +73,7 @@ export default function StatusPage() {
           </span>
         </div>
         <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4">
-          KnowledgeForge Status
+          Enterprise Grade AI Copilot Status
         </h1>
         <p className="text-gray-500 text-sm">Last updated: {now}</p>
       </section>

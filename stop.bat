@@ -1,8 +1,8 @@
 @echo off
-title KnowledgeForge - Stopping
+title Enterprise Grade AI Copilot - Stopping
 
 echo ============================================================
-echo   KnowledgeForge - Stopping Services
+echo   Enterprise Grade AI Copilot - Stopping Services
 echo ============================================================
 echo.
 
@@ -13,7 +13,7 @@ echo   Backend stopped.
 
 echo.
 echo Closing frontend window...
-taskkill /FI "WINDOWTITLE eq KnowledgeForge Frontend" /F >nul 2>&1
+taskkill /FI "WINDOWTITLE eq Enterprise Grade AI Copilot Frontend" /F >nul 2>&1
 echo   Frontend stopped.
 
 echo.

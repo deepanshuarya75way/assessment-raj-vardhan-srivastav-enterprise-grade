@@ -220,7 +220,7 @@ export default function SettingsPage() {
                 API Keys
               </h3>
               <p className="mb-4 text-sm text-surface-500">
-                Use API keys to integrate KnowledgeForge with your applications.
+                Use API keys to integrate Enterprise Grade AI Copilot with your applications.
               </p>
               <Button leftIcon={<Key className="h-4 w-4" />} variant="secondary">
                 Generate API Key
