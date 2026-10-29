@@ -2,16 +2,17 @@
 import logging
 import uuid
 from datetime import datetime, timezone
-from typing import List, Optional
+from typing import Any, List, Optional
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 from pydantic import BaseModel, EmailStr
 from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.core.security import hash_password
-from app.dependencies import get_current_user, get_db
-from app.models.user import Invite, User, UserRole
+from ..core.security import hash_password
+from ..dependencies import get_current_user, get_db
+from ..models.user import Invite, User, UserRole
+from ..models.audit import AuditLog
 
 logger = logging.getLogger(__name__)
 
@@ -225,7 +226,7 @@ async def update_user(
         count = await db.scalar(
             select(func.count()).select_from(User).where(User.role == UserRole.super_admin)
         )
-        if count <= 1 and _parse_role(body.role) != UserRole.super_admin:
+        if count is not None and count <= 1 and _parse_role(body.role) != UserRole.super_admin:
             raise HTTPException(
                 status_code=400,
                 detail="Cannot change role of the only Super Admin",
@@ -463,37 +464,29 @@ async def get_audit_logs(
     limit: int = Query(50, ge=1, le=200),
     current_user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
-):
+)-> list[dict[str, Any]]:
     """Return recent audit events derived from the users table and system events."""
     _require_admin(current_user)
 
     # Derive audit events from actual user data
     result = await db.execute(
-        select(User).order_by(User.created_at.desc()).limit(limit)
+        select(AuditLog)
+        .order_by(AuditLog.created_at.desc())
+        .limit(limit)
     )
-    users = result.scalars().all()
+    entries = result.scalars().all()
 
-    logs = []
-    for u in users:
-        role_val = u.role.value if hasattr(u.role, "value") else str(u.role)
-        logs.append({
-            "actor": "System",
-            "action": f"User registered: {u.email}",
-            "resource": "Users",
-            "resourceId": str(u.id),
-            "severity": "info",
-            "time": u.created_at.isoformat() if u.created_at else None,
-        })
-        if u.updated_at and u.updated_at != u.created_at:
-            logs.append({
-                "actor": "Admin",
-                "action": f"User updated: {u.email} (role: {role_val})",
-                "resource": "Users",
-                "resourceId": str(u.id),
-                "severity": "info",
-                "time": u.updated_at.isoformat() if u.updated_at else None,
-            })
+    return [
+        {
+            "id": str(entry.id),
+            "actor": entry.actor,
+            "action": entry.action,
+            "resourceId": entry.resource_id,
+            "severity": entry.severity,
+            "ipAddress": entry.ip_address,
+            "details": entry.details,
+            "time": entry.created_at.isoformat(),
 
-    # Sort by time desc and return top N
-    logs.sort(key=lambda x: x["time"] or "", reverse=True)
-    return logs[:limit]
+        }
+    for entry in entries
+    ]

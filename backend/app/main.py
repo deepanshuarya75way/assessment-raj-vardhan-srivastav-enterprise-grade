@@ -1,16 +1,20 @@
 import logging
 from contextlib import asynccontextmanager
 from datetime import datetime, timezone
+from .models import user, conversation, knowledge, search, workflow, audit
+from .config import settings
+from .database import init_db
+
+
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
 
-from app.config import settings
-from app.database import init_db
-from app.routers import auth, conversations, knowledge, search, analytics, voice, meetings, agents, workflows, admin, teams
-from app.routers import billing, websocket, video, connectors_oauth
-
+from .config import settings
+from .database import init_db
+from .routers import auth, conversations, knowledge, search, analytics, voice, meetings, agents, workflows, admin, teams
+from .routers import billing, websocket, video, connectors_oauth
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
@@ -28,8 +32,8 @@ async def lifespan(app: FastAPI):
     if settings.SEED_DEMO_USERS:
         try:
             from sqlalchemy import text
-            from app.database import AsyncSessionLocal
-            from app.core.security import hash_password
+            from .database import AsyncSessionLocal
+            from .core.security import hash_password
 
             async with AsyncSessionLocal() as session:
                 r = await session.execute(

@@ -1,18 +1,29 @@
-import ssl
+
 import logging
-from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession, async_sessionmaker
+import ssl
+from collections.abc import AsyncGenerator
+
+from sqlalchemy.ext.asyncio import (
+    AsyncSession,
+    async_sessionmaker,
+    create_async_engine,
+)
 from sqlalchemy.orm import DeclarativeBase
-from app.config import settings
+
+from .config import settings
 
 logger = logging.getLogger(__name__)
 
-def _get_connect_args():
+
+def _get_connect_args() -> dict[str, ssl.SSLContext | bool]:
+    """Return database connection arguments with optional SSL."""
     if settings.DATABASE_SSL:
-        ctx = ssl.create_default_context()
-        ctx.check_hostname = False
-        ctx.verify_mode = ssl.CERT_NONE
-        return {"ssl": ctx}
+        # Keep certificate and hostname verification enabled.
+        ssl_context = ssl.create_default_context()
+        return {"ssl": ssl_context}
+
     return {"ssl": False}
+
 
 engine = create_async_engine(
     settings.DATABASE_URL,
@@ -24,19 +35,21 @@ engine = create_async_engine(
 )
 
 AsyncSessionLocal = async_sessionmaker(
-    engine,
+    bind=engine,
     class_=AsyncSession,
     expire_on_commit=False,
-    autocommit=False,
     autoflush=False,
 )
 
 
 class Base(DeclarativeBase):
+    """Base class for all SQLAlchemy models."""
+
     pass
 
 
-async def get_db():
+async def get_db() -> AsyncGenerator[AsyncSession, None]:
+    """Yield a database session and manage its transaction."""
     async with AsyncSessionLocal() as session:
         try:
             yield session
@@ -44,15 +57,20 @@ async def get_db():
         except Exception:
             await session.rollback()
             raise
-        finally:
-            await session.close()
 
 
-async def init_db():
-    """Create all tables on startup."""
-    # Import all models so they are registered with Base.metadata
-    from app.models import user, conversation, knowledge, search, workflow  # noqa: F401
+async def init_db() -> None:
+    """Register all models and create missing database tables."""
+    # Import the package to register model classes in Base.metadata.
+    from . import models  # noqa: F401
 
-    async with engine.begin() as conn:
-        await conn.run_sync(Base.metadata.create_all)
+    async with engine.begin() as connection:
+        await connection.run_sync(Base.metadata.create_all)
+
     logger.info("Database tables created/verified successfully.")
+
+
+async def close_db() -> None:
+    """Dispose of the database connection pool during application shutdown."""
+    await engine.dispose()
+    logger.info("Database connection pool closed.")
